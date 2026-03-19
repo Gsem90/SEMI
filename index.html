@@ -858,10 +858,10 @@
   <h2>Still <em>Going.</em></h2>
   <p>Be the first to know when SEMI Fit<sup>™</sup> launches and when the store goes live. Join the waitlist no spam, just signal.</p>
 
-  <div class="waitlist-form">
-    <input type="email" id="emailInput" placeholder="Your email address" />
-    <button onclick="handleSubmit()">Join</button>
-  </div>
+  <form class="waitlist-form" action="https://formspree.io/f/mojkrzro" method="POST">
+  <input type="email" name="email" id="emailInput" placeholder="Your email address" required />
+  <button type="submit">Join</button>
+</form>
   <p class="waitlist-note">No spam. Ever. Just SEMI.</p>
   <p class="success-msg" id="successMsg">✓ You're in. We'll be in touch.</p>
 </section>
