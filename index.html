@@ -23,7 +23,21 @@
     <li><a href="#apparel">Apparel</a></li>
     <li><a href="#waitlist">Join Waitlist</a></li>
   </ul>
-</nav>
+   <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#app" onclick="toggleMenu()">App</a></li>
+      <li><a href="#apparel" onclick="toggleMenu()">Apparel</a></li>
+      <li><a href="#waitlist" onclick="toggleMenu()">Join Waitlist</a></li>
+      <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
 
 <!-- HERO -->
 <section class="hero">
@@ -232,4 +246,7 @@
 
   document.querySelectorAll('.philosophy-stat, .feature, .product-card').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform
+    el.style.transform  
+    function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
