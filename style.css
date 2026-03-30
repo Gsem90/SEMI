@@ -309,7 +309,7 @@ animation: heroReveal 1s ease forwards 0.25s;
     font-weight: 400;
   }
 
- /* ── APP ── */
+/* ── APP ── */
 .app-section {
   padding: 120px 48px;
   background: var(--gray);
