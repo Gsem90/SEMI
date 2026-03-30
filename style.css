@@ -23,7 +23,7 @@
   /* ── NAV ── */
   nav {
     position: fixed;
-    top: 44px;
+    top: 0px;
     left: 0;
     right: 0;
     z-index: 100;
@@ -775,9 +775,9 @@
   background: rgba(8, 8, 8, 0.96);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: fixed;
-  top: 0;
+  top: 76px;
   left: 0;
-  z-index: 2000;
+  z-index: 90;
   opacity: 0;
   transform: translateY(-8px);
   animation: launchFadeIn 0.6s ease forwards;
@@ -842,16 +842,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-.launch-banner,
-nav {
-  transition: transform 0.3s ease;
-}
-
-.launch-banner.banner-hidden {
-  transform: translateY(-100%);
-}
-
-nav.nav-shifted {
-  transform: translateY(-44px);
 }
