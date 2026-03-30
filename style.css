@@ -311,7 +311,7 @@ animation: heroReveal 1s ease forwards 0.25s;
 
 /* ── APP ── */
 .app-section {
-  padding: 120px 48px;
+  padding: 100px 48px 80px;
   background: var(--gray);
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -462,7 +462,7 @@ animation: heroReveal 1s ease forwards 0.25s;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .feature {
