@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Updated</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 28px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 span {
+      color: #e01010;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    .slash {
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.08;
+      width: 500px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <img class="slash" src="SemiRedSlash.png" alt="">
+  <div class="container">
+    <h1>Stay <span>Close.</span></h1>
+    <p>You’re on the list for drops, updates, and what’s next.</p>
+    <a href="/">Return Home</a>
+  </div>
+</body>
+</html>
