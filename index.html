@@ -262,16 +262,16 @@
   <img class="waitlist-slash" src="SemiRedSlash.png" alt="">
   
   <h2>Still <em>Going.</em></h2>
-  <p>Get updates on new drops, SEMI Fit launch news, and what’s next for the brand. No spam, just signal.</p>
+  <p>Get updates on new drops, SEMI Fit launch news, and what’s next for the brand. No spam. Just signal.</p>
 
-  <form class="waitlist-form" action="https://formspree.io/f/mojkrzro" method="POST">
-  <input type="email" name="email" id="emailInput" placeholder="Your email address" required />
-  <button type="submit">Get Updates</button>
-</form>
+  <form name="updates" method="POST" data-netlify="true" action="/thank-you-updates" class="waitlist-form">
+    <input type="hidden" name="form-name" value="updates">
+    <input type="email" name="email" id="emailInput" placeholder="Your email address" required />
+    <button type="submit">Get Updates</button>
+  </form>
+
   <p class="waitlist-note">Drops. Updates. No noise.</p>
-  <p class="success-msg" id="successMsg">✓ You're in. We'll keep you posted.</p>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
@@ -294,17 +294,6 @@
   // Cursor
   document.addEventListener('mousemove', e => {
   });
-
-  // Waitlist
-  function handleSubmit() {
-    const email = document.getElementById('emailInput').value;
-    if (!email || !email.includes('@')) {
-      document.getElementById('emailInput').style.borderColor = 'rgba(224,16,16,0.8)';
-      return;
-    }
-    document.querySelector('.waitlist-form').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-  }
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
