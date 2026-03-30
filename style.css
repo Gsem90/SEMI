@@ -62,7 +62,7 @@
 /* ── HERO ── */
 
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +102,7 @@
 
 .hero-mark {
   width: min(1100px, 92vw);
-  margin: 100px auto 24px; /* adjust if needed */
+  margin: 90px auto 20px; /* adjust if needed */
   position: relative;
   z-index: 2;
   opacity: 0;
@@ -229,7 +229,11 @@ animation: heroReveal 1s ease forwards 0.25s;
 
   /* ── PHILOSOPHY ── */
   .philosophy {
-    padding: 120px 48px;
+    position: relative;
+    margin-top: -60px;
+    z-index: 3;
+    
+    padding: 120px 48px 120px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
