@@ -252,7 +252,9 @@
   <span class="footer-copy">© 2025 SEMI<sup>™</sup>. Unfinished.</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<script>
   // Cursor
   document.addEventListener('mousemove', e => {
   });
@@ -280,7 +282,47 @@
 
   document.querySelectorAll('.philosophy-stat, .feature, .product-card').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform  
-    function toggleMenu() {
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
+
+  // Launch banner behavior
+  const launchBanner = document.getElementById('launchBanner');
+  const launchClose = document.getElementById('launchClose');
+  const nav = document.querySelector('nav');
+
+  let lastScrollY = window.scrollY;
+
+  if (launchClose && launchBanner && nav) {
+    launchClose.addEventListener('click', function () {
+      launchBanner.classList.add('hidden');
+      nav.classList.add('nav-shifted');
+    });
+
+    window.addEventListener('scroll', function () {
+      const currentScrollY = window.scrollY;
+
+      if (launchBanner.classList.contains('hidden')) {
+        return;
+      }
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        launchBanner.classList.add('banner-hidden');
+        nav.classList.add('nav-shifted');
+      } else {
+        launchBanner.classList.remove('banner-hidden');
+        nav.classList.remove('nav-shifted');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  }
+</script>
+</body>
+</html>
