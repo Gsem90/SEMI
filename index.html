@@ -13,36 +13,58 @@
 <body>
 
 
+<!-- LAUNCH BANNER -->
+<div class="launch-banner" id="launchBanner">
+  <div class="launch-banner-inner">
+    <span class="launch-text">THE STORE IS LIVE</span>
+    <span class="launch-divider">/</span>
+    <a href="https://shop.wearsemi.com" target="_blank" rel="noopener noreferrer" class="launch-link">ENTER SHOP</a>
+    <button class="launch-close" id="launchClose" aria-label="Close banner">&times;</button>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-<img src="Semi_white_transparent.png" alt="SEMI">  </div>
+    <img src="Semi_white_transparent.png" alt="SEMI">
+  </div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#app">App</a></li>
     <li><a href="#apparel">Apparel</a></li>
     <li><a href="#waitlist">Join Waitlist</a></li>
   </ul>
-   <button class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li><a href="#app" onclick="toggleMenu()">App</a></li>
-      <li><a href="#apparel" onclick="toggleMenu()">Apparel</a></li>
-      <li><a href="#waitlist" onclick="toggleMenu()">Join Waitlist</a></li>
-      <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-    </ul>
-    <script>
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#app" onclick="toggleMenu()">App</a></li>
+    <li><a href="#apparel" onclick="toggleMenu()">Apparel</a></li>
+    <li><a href="#waitlist" onclick="toggleMenu()">Join Waitlist</a></li>
+    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
+
+  const launchBanner = document.getElementById('launchBanner');
+  const launchClose = document.getElementById('launchClose');
+
+  if (launchClose && launchBanner) {
+    launchClose.addEventListener('click', function () {
+      launchBanner.classList.add('hidden');
+    });
+  }
 </script>
-  </div>
 
 <!-- HERO -->
 <section class="hero">
