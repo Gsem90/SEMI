@@ -192,7 +192,7 @@
     <p class="effective-date">Effective Date: March 29, 2026 &nbsp;·&nbsp; Last Updated: March 29, 2026</p>
 
     <p class="intro">
-      These Terms of Service ("Terms") govern your access to and use of the SEMI fitness platform (<a href="https://app.wearsemi.com">app.wearsemi.com</a>) and the SEMI website (<a href="https://wearsemi.com">wearsemi.com</a>) (collectively, the "Services"), operated by SEMI / Greg Semanisin ("we," "our," or "us"). These Terms do not apply to the SEMI apparel store (shop.wearsemi.com), which is operated through Shopify and subject to its own separate terms. By creating an account or using the Services, you agree to be bound by these Terms. If you do not agree, do not use the Services.
+      These Terms of Service ("Terms") govern your access to and use of the SEMI fitness platform (<a href="https://app.wearsemi.com">app.wearsemi.com</a>) and the SEMI website (<a href="https://wearsemi.com">wearsemi.com</a>) (collectively, the "Services"), operated by SEMI ("we," "our," or "us"). These Terms do not apply to the SEMI apparel store (shop.wearsemi.com), which is operated through Shopify and subject to its own separate terms. By creating an account or using the Services, you agree to be bound by these Terms. If you do not agree, do not use the Services.
     </p>
 
     <section>
@@ -342,16 +342,39 @@
       </p>
     </section>
 
-    <section>
-      <h2>14. Contact Us</h2>
-      <p>If you have questions about these Terms, please contact us:</p>
-      <div class="contact-block">
-        <p><strong style="color:#f5f5f5;">SEMI</strong></p>
-        <p>Operated by Greg Semanisin</p>
-        <p>Email: <a href="mailto:wear.semi@gmail.com">wear.semi@gmail.com</a></p>
-        <p>Website: <a href="https://wearsemi.com">wearsemi.com</a></p>
-      </div>
-    </section>
+<section>
+  <h2>14. Contact Us</h2>
+  <p>If you have questions about these Terms, reach out below.</p>
+
+  <div class="contact-block">
+    <p><strong class="brand-name">SEMI</strong></p>
+    <p>Website: <a href="https://wearsemi.com">wearsemi.com</a></p>
+  </div>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" class="contact-form">
+    
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Spam protection -->
+    <p style="display:none;">
+      <input name="bot-field">
+    </p>
+
+    <div class="form-group">
+      <input type="text" name="name" placeholder="NAME" required>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder="EMAIL" required>
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" rows="4" placeholder="MESSAGE"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</section>
   </main>
 
   <footer>
