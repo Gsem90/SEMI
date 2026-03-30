@@ -350,7 +350,7 @@ animation: heroReveal 1s ease forwards 0.25s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   text-align: center;
 }
 
@@ -364,21 +364,38 @@ animation: heroReveal 1s ease forwards 0.25s;
 
 .beta-form {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 320px;
+
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
-  padding: 6px;
+  padding: 10px;
+
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.beta-form:focus-within {
+  box-shadow: 0 0 12px rgba(224,16,16,0.2);
 }
 
 .beta-form input {
+  width: 100%;
   background: transparent;
   border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   padding: 14px 16px;
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   outline: none;
-  min-width: 160px;
+  transition: border-color 0.2s ease;
+}
+
+.beta-form input:focus {
+  border-bottom: 1px solid var(--red);
 }
 
 .beta-form input::placeholder {
@@ -386,6 +403,7 @@ animation: heroReveal 1s ease forwards 0.25s;
 }
 
 .beta-form button {
+  width: 100%;
   background: var(--red);
   color: var(--white);
   border: none;
@@ -408,6 +426,35 @@ animation: heroReveal 1s ease forwards 0.25s;
   font-size: 11px;
   color: rgba(245,245,245,0.45);
   letter-spacing: 0.03em;
+}
+
+.beta-success {
+  display: none;
+  width: 100%;
+  max-width: 320px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(224,16,16,0.18);
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.beta-success.show {
+  display: block;
+}
+
+.beta-success-title {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.beta-success-text {
+  color: rgba(245,245,245,0.5);
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 /* ── APP FEATURES ── */
@@ -474,7 +521,6 @@ animation: heroReveal 1s ease forwards 0.25s;
   color: rgba(245,245,245,0.4);
   letter-spacing: 0.05em;
 }
-
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .app-section {
