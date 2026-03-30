@@ -23,7 +23,7 @@
   /* ── NAV ── */
   nav {
     position: fixed;
-    top: 0;
+    top: 44px;
     left: 0;
     right: 0;
     z-index: 100;
@@ -31,7 +31,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 48px;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(8px);
   }
 
   .nav-logo img {mix-blend-mode: screen;
@@ -770,10 +771,12 @@
 
 .launch-banner {
   width: 100%;
+  height: 44px;
   background: rgba(8, 8, 8, 0.96);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 2000;
   opacity: 0;
   transform: translateY(-8px);
@@ -781,13 +784,12 @@
 }
 
 .launch-banner-inner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 12px 48px;
-  text-align: center;
+  height: 44px;
+  padding: 0 48px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   letter-spacing: 3px;
@@ -839,4 +841,16 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.launch-banner,
+nav {
+  transition: transform 0.3s ease;
+}
+
+.launch-banner.banner-hidden {
+  transform: translateY(-100%);
+}
+
+nav.nav-shifted {
+  transform: translateY(-44px);
 }
