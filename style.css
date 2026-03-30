@@ -8,14 +8,18 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+  scroll-behavior: smooth;
+  background: var(--black);
+}
 
   body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-  }
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
 
   /* ── CURSOR ── */
   body { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='24' viewBox='0 0 16 24'%3E%3Cpath d='M0 0 L0 20 L5 15 L8 22 L10 21 L7 14 L13 14 Z' fill='%23e01010' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E") 0 0, default; }
@@ -30,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 48px;
+    padding: 16px 48px;
     background: rgba(10,10,10,0.95);
     backdrop-filter: blur(8px);
   }
