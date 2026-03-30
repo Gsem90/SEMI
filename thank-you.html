@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Received</title>
+  <title>You're In</title>
+
   <style>
     body {
+      margin: 0;
       background: #000;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
@@ -13,26 +15,72 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
     }
 
     h1 {
-      letter-spacing: 3px;
+      font-size: 28px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 span {
+      color: #e01010;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
     }
 
     a {
+      display: inline-block;
+      margin-top: 24px;
       color: #fff;
-      text-decoration: underline;
-      font-size: 12px;
-      letter-spacing: 1px;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    /* RED SLASH BACKGROUND */
+    .slash {
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.08;
+      width: 500px;
+      z-index: 1;
     }
   </style>
 </head>
+
 <body>
-  <div>
-    <h1>Received.</h1>
-    <p>We’ll be in touch.</p>
-    <br>
+
+  <!-- Background Slash -->
+  <img class="slash" src="SemiRedSlash.png" alt="">
+
+  <div class="container">
+    <h1>You're <span>In.</span></h1>
+    <p>Your beta application has been received.</p>
+    <p>We’ll reach out when access opens.</p>
+
     <a href="/">Return Home</a>
   </div>
+
 </body>
 </html>
